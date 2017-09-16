@@ -1,0 +1,25 @@
+{
+  "name": "social-db",
+  "version": "1.0.0",
+  "description": "Group build of a social media site from the ground up.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwdavis/social-db.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nwdavis/social-db/issues"
+  },
+  "homepage": "https://github.com/nwdavis/social-db#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "sequelize": "^4.8.4"
+  }
+}
