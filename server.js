@@ -17,7 +17,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("app/public"));
 
 //routes
-require("./routes/api-routes.js")(app);
+require("./routes/authors-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/post-api-routes.js")(app);
 
 //setting handlebars
 var exphbs = require("express-handlebars");
