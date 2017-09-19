@@ -1,8 +1,8 @@
 var orm = require("../config/orm.js");
 
 var content = {
-    selectAll: function(cb){
-        orm.selectAll("content", function(result){
+    selectAllContent: function(cb){
+        orm.selectAllContent("content", function(result){
             cb(result)
         })
     },

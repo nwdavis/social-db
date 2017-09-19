@@ -1,8 +1,8 @@
 var orm = require("../config/orm.js");
 
 var comments = {
-    selectAll: function(cb){
-        orm.selectAll("comments", function(result){
+    selectAllForContent: function(col, val, cb){
+        orm.selectAllForContent("comments", function(result){
             cb(result)
         })
     },
