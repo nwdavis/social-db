@@ -14,4 +14,4 @@ var content = {
     }
 }
 
-module.exports = content
+module.exports = content;

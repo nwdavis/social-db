@@ -14,4 +14,4 @@ var comments = {
     }
 }
 
-module.exports = comments
+module.exports = comments;
