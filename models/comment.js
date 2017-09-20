@@ -1,12 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+  var Comm = sequelize.define("Comm", {
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
@@ -26,16 +19,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Post.associate = function(models) {
-    Post.belongsTo(models.Author, {
+  Comm.associate = function(models) {
+    Comm.belongsTo(models.Author, {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false
-      }
-    });
+      } 
   }
 
   // Add a belongsTo association to Authors here
   // Example: https://github.com/sequelize/express-example/blob/master/models/task.js
-  return Post;
+  return Comm;
 };
