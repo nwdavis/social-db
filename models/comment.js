@@ -24,7 +24,8 @@ module.exports = function(sequelize, DataTypes) {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false
-      } 
+      }
+    }); 
   }
 
   // Add a belongsTo association to Authors here
