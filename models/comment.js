@@ -25,7 +25,9 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: { 
         allowNull: false
       } 
+    })
   }
+
 
   // Add a belongsTo association to Authors here
   // Example: https://github.com/sequelize/express-example/blob/master/models/task.js
