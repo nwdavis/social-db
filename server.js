@@ -23,9 +23,9 @@ require("./routes/html-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
 
 //setting handlebars
-// var exphbs = require("express-handlebars");
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 
 //starts the server INCLUDES FORCE TRUE, TAKE OUT AFTER TESTING!!!!!!!!!!
