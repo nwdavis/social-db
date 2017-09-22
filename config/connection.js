@@ -3,11 +3,12 @@ var connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
     user: "root",
-    password: "root",
+    password: "",
     database: "social_db"
 });
-connection.connect(function(err) {
-    if (err) {
+
+connection.connect(function(err){
+    if (err){
         console.log("error")
     }
     console.log("Connected as ID" + connection.threadId)
