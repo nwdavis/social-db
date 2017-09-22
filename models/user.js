@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  var Author = sequelize.define("Author", {
+  var User = sequelize.define("User", {
 
-    // Giving the Author model a name of type STRING
+    // Giving the User model a name of type STRING
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -19,5 +19,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: 0
     }
   });
-  return Author;
+  return User;
 };
