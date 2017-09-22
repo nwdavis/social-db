@@ -11,18 +11,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
-    },
-    upVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    },
-    downVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    },
-    totalVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
     }
   });
 
