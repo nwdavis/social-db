@@ -15,12 +15,20 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Post.associate = function(models) {
-    Post.belongsTo(models.Author, {
+    Post.belongsTo(models.User, {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false
       }
     });
+  }
+  Post.associate = function(models) {
+    Post.hasMany(models.Comm, {
+      onDelete: "CASCADE",
+      foreignKey: { 
+        allowNull: false
+      } 
+    })
   }
 
   // Add a belongsTo association to Authors here

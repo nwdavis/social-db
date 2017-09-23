@@ -18,8 +18,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 //routes
-require("./routes/authors-api-routes.js")(app);
+require("./routes/user-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+require("./routes/comment-api-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
 
 //setting handlebars
