@@ -5,19 +5,24 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      len: [1, 15]
     },
-    upVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    },
-    downVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    },
-    totalVote: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    }
   });
+  User.associate = function(models) {
+    User.hasMany(models.Comm, {
+      onDelete: "CASCADE",
+      foreignKey: { 
+        allowNull: false
+      } 
+    });
+  }
+  User.associate = function(models) {
+    User.hasMany(models.Post, {
+      onDelete: "CASCADE",
+      foreignKey: { 
+        allowNull: false
+      } 
+    });
+  }
   return User;
 };

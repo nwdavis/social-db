@@ -20,7 +20,16 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Comm.associate = function(models) {
-    Comm.belongsTo(models.Author, {
+    Comm.belongsTo(models.User, {
+      onDelete: "CASCADE",
+      foreignKey: { 
+        allowNull: false
+      } 
+    })
+  }
+
+  Comm.associate = function(models) {
+    Comm.belongsTo(models.Post, {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false

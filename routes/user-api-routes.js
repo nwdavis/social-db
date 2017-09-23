@@ -14,6 +14,7 @@ module.exports = function(app){
   });
   //adds an User to the database
   app.post("/api/users", function(req, res){
+    console.log("Called User API for POST");
     db.User.create(req.body).then(function(dbUser){
       res.json(dbUser);
     });

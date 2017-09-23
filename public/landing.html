@@ -37,6 +37,9 @@
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Nav Bar Script -->
+    <script src="js/navbar.js"></script>
+
     <title>codeIt</title>
 
 </head>
@@ -45,13 +48,14 @@
 
 <body>
 
+    <!-- Nav Bar -->
     <nav class="navbar is-transparent">
         <div class="navbar-brand">
-            <figure class = "image is-64x64">
-                <a href = "landing.html" target = "_blank"> <img src="img/PBS_Logo-1.png" /></a>
+            <figure class="image is-64x64">
+                <a href="landing.html" target="_blank"> <img src="img/PBS_Logo-1.png" /></a>
             </figure>
 
-            <a class="navbar-item" href="index.html" target = "_blank" alt="codeIt: like reddit but better!">codeIt</a>
+            <a class="navbar-item" href="index.html" target="_blank" alt="codeIt: like reddit but better!">codeIt</a>
 
             <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
                 <span class="icon" style="color: #333;">
@@ -75,195 +79,109 @@
         <div id="navMenuTransparentExample" class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link  is-active" href="/documentation/overview/start/">
-                            Docs
+                    <a class="navbar-link  is-active" href="subject/subject.html">
+                            Subjects
                           </a>
                     <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item " href="/documentation/overview/start/">
-                              Overview
+                        <a class="navbar-item " href="subject/general.html">
+                              General
                             </a>
-                        <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-                              Modifiers
+                        <a class="navbar-item " href="subject/resources.html.html">
+                              Resources
                             </a>
-                        <a class="navbar-item " href="http://bulma.io/documentation/columns/basics/">
-                              Columns
+                        <a class="navbar-item " href="subject/careers.html">
+                              Careers
                             </a>
-                        <a class="navbar-item " href="http://bulma.io/documentation/layout/container/">
-                              Layout
+                        <a class="navbar-item " href="subject/random.html">
+                              Random
                             </a>
-                        <a class="navbar-item " href="http://bulma.io/documentation/form/general/">
-                              Form
-                            </a>
-                        <a class="navbar-item " href="http://bulma.io/documentation/elements/box/">
-                              Elements
-                            </a>
-
-                        <a class="navbar-item is-active" href="http://bulma.io/documentation/components/breadcrumb/">
-                                Components
-                              </a>
-
-                        <hr class="navbar-divider">
-                        <div class="navbar-item">
-                            <div>
-                                <p class="is-size-6-desktop">
-                                    <strong class="has-text-info">0.5.3</strong>
-                                </p>
-
-                                <small>
-                                    <a class="bd-view-all-versions" href="/versions">View all versions</a>
-                                  </small>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link " href="http://bulma.io/blog/">
-                            Blog
+                    <a class="navbar-link " href="about/about.html">
+                            About
                           </a>
-                    <div id="blogDropdown" class="navbar-dropdown is-boxed" data-style="width: 18rem;">
-
-                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                            <div class="navbar-content">
-                                <p>
-                                    <small class="has-text-info">03 Aug 2017</small>
-                                </p>
-                                <p>New feature: list of tags</p>
-                            </div>
-                        </a>
-
-                        <a class="navbar-item" href="/2017/08/01/bulma-bootstrap-comparison/">
-                            <div class="navbar-content">
-                                <p>
-                                    <small class="has-text-info">01 Aug 2017</small>
-                                </p>
-                                <p>Bulma / Bootstrap comparison</p>
-                            </div>
-                        </a>
-
-                        <a class="navbar-item" href="/2017/07/24/access-previous-bulma-versions/">
-                            <div class="navbar-content">
-                                <p>
-                                    <small class="has-text-info">24 Jul 2017</small>
-                                </p>
-                                <p>Access previous Bulma versions</p>
-                            </div>
-                        </a>
-
-                        <a class="navbar-item" href="http://bulma.io/blog/">
-                              More posts
-                            </a>
-                        <hr class="navbar-divider">
-                        <div class="navbar-item">
-                            <div class="navbar-content">
-                                <div class="level is-mobile">
-                                    <div class="level-left">
-                                        <div class="level-item">
-                                            <strong>Stay up to date!</strong>
-                                        </div>
-                                    </div>
-                                    <div class="level-right">
-                                        <div class="level-item">
-                                            <a class="button bd-is-rss is-small" href="http://bulma.io/atom.xml">
-                                                <span class="icon is-small">
-                                          <i class="fa fa-rss"></i>
-                                        </span>
-                                                <span>Subscribe</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <div class="navbar-link">
-                        More
-                    </div>
-                    <div id="moreDropdown" class="navbar-dropdown is-boxed">
-                        <a class="navbar-item " href="http://bulma.io/extensions/">
-                            <div class="level is-mobile">
-                                <div class="level-left">
-                                    <div class="level-item">
-                                        <p>
-                                            <strong>Extensions</strong>
-                                            <br>
-                                            <small>Side projects to enhance Bulma</small>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-right">
-                                    <div class="level-item">
-                                        <span class="icon has-text-info">
-                                      <i class="fa fa-plug"></i>
-                                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a class="navbar-item " href="http://bulma.io/expo/">
-                    <span class="bd-emoji">⭐️</span> Expo
-                </a>
-                <a class="navbar-item " href="http://bulma.io/love/">
-                    <span class="bd-emoji">❤️</span> Love
-                </a>
-            </div>
-
-            <div class="navbar-end">
-                <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
-                    <span class="icon" style="color: #333;">
-                            <i class="fa fa-lg fa-github"></i>
-                          </span>
-                </a>
-                <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
-                    <span class="icon" style="color: #55acee;">
-                            <i class="fa fa-lg fa-twitter"></i>
-                          </span>
-                </a>
-                <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
-                                <span class="icon">
-                      <i class="fa fa-twitter"></i>
-                    </span>
-                                <span>
-                      Tweet
-                    </span>
-                            </a>
-
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.3.zip">
-                                <span class="icon">
-                                  <i class="fa fa-download"></i>
-                                </span>
-                                <span>Download</span>
-                            </a>
-                        </p>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item " href="about/class.html">
+                                      Class
+                                    </a>
+                        <a class="navbar-item " href="about/group.html">
+                                      Group
+                                    </a>
+                        <a class="navbar-item " href="about/project.html">
+                                      Project
+                                    </a>
                     </div>
                 </div>
             </div>
+
+            <div class="field is-grouped">
+                <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Search">
+                </p>
+                <p class="control">
+                    <a class="button is-info">
+                        Search
+                      </a>
+                </p>
+            </div>
+
+            <br>
+
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="userName">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                    <span class="icon is-small is-right">
+                        <i class="fa fa-check"></i>
+                      </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                      </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success">
+                        Login
+                      </button>
+                </p>
+            </div>
+
+        </div>
         </div>
     </nav>
 
- <!-- PAGE BODY -->  
-    <section class = "hero is-primary">
-        <div class = "hero-body">
-            <div class = "container has-text-centered">
+    <!-- PAGE BODY -->
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
                 <div class="columns is-hcentered">
-                    <div class = "column">
-                        <h1 class = "title is-1 is-bold">code-it </h1>
-                             <h2 class="subtitle is-4">
+                    <div class="column">
+                        <h1 class="title is-1 is-bold">code-it </h1>
+                        <h2 class="subtitle is-4">
                             Share. Engage. Learn.
+<<<<<<< HEAD
                              </h2>
 
                                 <a href = "link.html" target = "_blank" class="button is-primary is-inverted is-medium" type="submit">Submit a new link</a>
+=======
+                        </h2>
 
-                               <a href="text.html" target = "_blank" class="button is-primary is-inverted is-medium" type="submit">Submit new text</a>
+                        <!-- <figure class = "image is-128x128">
+                                <img src = "img/PBS_Logo-1.png">
+                            </figure> -->
+                        <a href="link.html" target="_blank" class="button is-primary is-inverted is-medium" type="submit">Submit a new link</a>
+>>>>>>> d481cfe404092b5256d4e64931389014abde9858
+
+                        <a href="text.html" target="_blank" class="button is-primary is-inverted is-medium" type="submit">Submit new text</a>
                     </div>
                 </div>
             </div>
@@ -273,11 +191,23 @@
     <br>
 
     <div class="container is-fluid">
-            <article class="media">
-                <figure class="media-left">
-                    <p class="image is-64x64">
-                        <img src="http://bulma.io/images/placeholders/128x128.png">
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img src="http://bulma.io/images/placeholders/128x128.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>John Smith</strong>
+                        <br>
+                        <a href="http://bulma.io/"></a>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                        <br>
+                        <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
                     </p>
+<<<<<<< HEAD
                 </figure>
                     <div class="media-content">
                         <div class="content">
@@ -311,91 +241,132 @@
                 <br>
                 <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
             </p>
-            </div>
+=======
+                </div>
 
-            <article class="media">
+                <!-- <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                    
+                        <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                    </div>
+                    </nav> -->
+>>>>>>> d481cfe404092b5256d4e64931389014abde9858
+            </div>
+            <div class="media-right">
+                <button class="delete"></button>
+            </div>
+        </article>
+
+        <article class="media">
             <figure class="media-left">
-                <p class="image is-48x48">
-                <img src="http://bulma.io/images/placeholders/96x96.png">
+                <p class="image is-64x64">
+                    <img src="http://bulma.io/images/placeholders/128x128.png">
                 </p>
             </figure>
             <div class="media-content">
                 <div class="content">
-                <p>
-                    <strong>Sean Brown</strong>
-                    <br>
-                    Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
-                    <br>
-                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-                </p>
+                    <p>
+                        <strong>Barbara Middleton</strong>
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+                        <br>
+                        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+                    </p>
                 </div>
 
                 <article class="media">
-                Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+                    <figure class="media-left">
+                        <p class="image is-48x48">
+                            <img src="http://bulma.io/images/placeholders/96x96.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Sean Brown</strong>
+                                <br> Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+                                <br>
+                                <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                            </p>
+                        </div>
+
+                        <article class="media">
+                            Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+                        </article>
+
+                        <article class="media">
+                            Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+                        </article>
+                    </div>
                 </article>
 
                 <article class="media">
-                Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+                    <figure class="media-left">
+                        <p class="image is-48x48">
+                            <img src="http://bulma.io/images/placeholders/96x96.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Kayli Eunice </strong>
+                                <br> Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                cubilia Curae; Phasellus lacinia non nisl id feugiat.
+                                <br>
+                                <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                            </p>
+                        </div>
+                    </div>
                 </article>
             </div>
-            </article>
-
-            <article class="media">
-            <figure class="media-left">
-                <p class="image is-48x48">
-                <img src="http://bulma.io/images/placeholders/96x96.png">
-                </p>
-            </figure>
-            <div class="media-content">
-                <div class="content">
-                <p>
-                    <strong>Kayli Eunice </strong>
-                    <br>
-                    Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
-                    <br>
-                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-                </p>
-                </div>
-            </div>
-            </article>
-        </div>
         </article>
         <article class="media">
-        <figure class="media-left">
-            <p class="image is-64x64">
-            <img src="http://bulma.io/images/placeholders/128x128.png">
-            </p>
-        </figure>
-        <div class="media-content">
-            <div class="field">
-            <p class="control">
-                <textarea class="textarea" placeholder="Add a comment..."></textarea>
-            </p>
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img src="http://bulma.io/images/placeholders/128x128.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="field">
+                    <p class="control">
+                        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button">Post comment</button>
+                    </p>
+                </div>
             </div>
-            <div class="field">
-            <p class="control">
-                <button class="button">Post comment</button>
-            </p>
-            </div>
-        </div>
         </article>
     </div>
-<br>
-<br>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <strong>code-it</strong> by <a href="#">Alan, Nathaniel, Rafael, Raven, & Kevin</a>. 
-      </p>
-      <br>
-      <p>
-        <a class="icon" href="https://github.com/nwdavis/social-db">
-          <i class="fa fa-3x fa-github"></i>
-        </a>
-      </p>
-    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>code-it</strong> by <a href="#">Alan, Nathaniel, Rafael, Raven, & Kevin</a>.
+                </p>
+                <br>
+                <p>
+                    <a class="icon" href="https://github.com/nwdavis/social-db">
+                        <i class="fa fa-3x fa-github"></i>
+                    </a>
+                </p>
+            </div>
 
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d481cfe404092b5256d4e64931389014abde9858
 </body>
 
 </html>
