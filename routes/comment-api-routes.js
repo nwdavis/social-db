@@ -13,7 +13,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET all comments related to a post 
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/commments", function(req, res) {
     var query = {};
     if (req.query.post_id) {
       query.PostId = req.query.post_id;
@@ -25,8 +25,10 @@ module.exports = function(app) {
     });
   });
 
-  // Get rotue for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
+  // Get route for retrieving a single users comments
+  
+  //NOT CORRECT RIGHT NOW
+  app.get("/api/comments/:id", function(req, res) {
     db.Post.findOne({
       where: {
         id: req.params.id
@@ -38,10 +40,10 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
+  app.post("/api/comments", function(req, res) {
     console.log(req.body);
-    db.Post.create(req.body).then(function(dbPost) {
-      res.json(dbPost);
+    db.Comm.create(req.body).then(function(dbComm) {
+      res.json(dbComm);
     });
   });
 
