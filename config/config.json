@@ -1,11 +1,7 @@
 {
     "development": {
         "username": "root",
-<<<<<<< HEAD
-        "password": "test1",
-=======
-        "password": "root",
->>>>>>> b264c74594ac56fe3dd7cdc588702aca7d5c0748
+        "password": "",
         "database": "social_db",
         "host": "127.0.0.1",
         "dialect": "mysql"

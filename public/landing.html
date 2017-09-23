@@ -18,7 +18,7 @@
     <meta name="keywords" content="codeIt, code, it">
 
     <!-- The important people -->
-    <meta name="author" content="Alan Durham, Kevin Gulledge, Nathaniel Davis, Rafael Ortiz, Raven Lawton">
+    <meta name="author" content="Alan Durham, Kevin Gulledge, Nathaniel Davis, Rafael Ortiz, Raven Williams">
 
     <!-- Mobility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,9 @@
 
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
 
     <!-- Bulma CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
@@ -44,7 +47,11 @@
 
     <nav class="navbar is-transparent">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html" alt="codeIt: like reddit but better!">codeIt</a>
+            <figure class = "image is-64x64">
+                <a href = "landing.html" target = "_blank"> <img src="img/PBS_Logo-1.png" /></a>
+            </figure>
+
+            <a class="navbar-item" href="index.html" target = "_blank" alt="codeIt: like reddit but better!">codeIt</a>
 
             <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
                 <span class="icon" style="color: #333;">
@@ -243,11 +250,170 @@
         </div>
     </nav>
 
+ <!-- PAGE BODY -->  
+    <section class = "hero is-primary">
+        <div class = "hero-body">
+            <div class = "container has-text-centered">
+                <div class="columns is-hcentered">
+                    <div class = "column">
+                        <h1 class = "title is-1 is-bold">code-it </h1>
+                             <h2 class="subtitle is-4">
+                            Share. Engage. Learn.
+                             </h2>
+                    
+                            <!-- <figure class = "image is-128x128">
+                                <img src = "img/PBS_Logo-1.png">
+                            </figure> -->
+                                <a href = "link.html" target = "_blank" class="button is-primary is-inverted is-medium" type="submit">Submit a new link</a>
+
+                               <a href="text.html" target = "_blank" class="button is-primary is-inverted is-medium" type="submit">Submit new text</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+
     <div class="container is-fluid">
+            <article class="media">
+                <figure class="media-left">
+                    <p class="image is-64x64">
+                        <img src="http://bulma.io/images/placeholders/128x128.png">
+                    </p>
+                </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>John Smith</strong> 
+                                    <br>
+                                <a href = "http://bulma.io/"></a> 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                <br>
+                                <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                            </p>
+                        </div>
+                    
+                    <!-- <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                    
+                        <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                    </div>
+                    </nav> -->
+                    </div>
+                <div class="media-right">
+                    <button class="delete"></button>
+                </div>
+                </article>
 
+            <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+            <img src="http://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+            <p>
+                <strong>Barbara Middleton</strong>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+                <br>
+                <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+            </p>
+            </div>
 
+            <article class="media">
+            <figure class="media-left">
+                <p class="image is-48x48">
+                <img src="http://bulma.io/images/placeholders/96x96.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                <p>
+                    <strong>Sean Brown</strong>
+                    <br>
+                    Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+                    <br>
+                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                </p>
+                </div>
 
+                <article class="media">
+                Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+                </article>
+
+                <article class="media">
+                Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+                </article>
+            </div>
+            </article>
+
+            <article class="media">
+            <figure class="media-left">
+                <p class="image is-48x48">
+                <img src="http://bulma.io/images/placeholders/96x96.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                <p>
+                    <strong>Kayli Eunice </strong>
+                    <br>
+                    Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
+                    <br>
+                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                </p>
+                </div>
+            </div>
+            </article>
+        </div>
+        </article>
+        <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+            <img src="http://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="field">
+            <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+            </p>
+            </div>
+            <div class="field">
+            <p class="control">
+                <button class="button">Post comment</button>
+            </p>
+            </div>
+        </div>
+        </article>
     </div>
+<br>
+<br>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>code-it</strong> by <a href="#">Alan, Nathaniel, Rafael, Raven, & Kevin</a>. 
+      </p>
+      <br>
+      <p>
+        <a class="icon" href="https://github.com/nwdavis/social-db">
+          <i class="fa fa-3x fa-github"></i>
+        </a>
+      </p>
+    </div>
+
+
+    
+
 
 </body>
 
