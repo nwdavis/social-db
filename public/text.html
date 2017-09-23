@@ -26,17 +26,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- CSS Reset -->
-    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
 
     <!-- CSS Style Sheet -->
-    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- Bulma CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
 
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- JQuery -->
+     <script src="https://code.jquery.com/jquery.js"></script>
     <title>codeIt</title>
 
 </head>
@@ -257,16 +258,16 @@
 <div class="container is-fluid">
    <div class = "column is-6"> 
         <div class="field">
-            <label class="label">Name/Author</label>
+            <label class="label" >Name/Author</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" id = "userName" type="text" placeholder="user name">
             </div>
         </div>
 
         <div class="field">
-            <label class="label">Subject</label>
+            <label class="label" >Subject</label>
             <div class="control">
-                <div class="select">
+                <div class="select" >
                 <select>
                     <option>Select dropdown</option>
                     <option>Resources</option>
@@ -279,15 +280,15 @@
         </div>
 
         <div class="field">
-            <label class="label">Message</label>
+            <label class="label" >Message</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" id="textBody" placeholder="message input"></textarea>
             </div>
         </div>
         <br>
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-primary">Submit</button>
+                <button class="button is-primary" id="submit">Submit</button>
             </div>
             <div class="control">
                 <button class="button is-light">Cancel</button>
@@ -301,3 +302,39 @@
 </body>
 
 </html>
+<script type="text/javascript">
+    $("#submit").on("click", function (event){
+        event.preventDefault();
+
+        var newText= {
+            userName: $("#userName").val().trim(),
+            select:  $(".select").val().trim(),
+            textBody: $("#textBody").val().trim(),
+        };
+
+        console.log(newText);
+
+    $.post("/api/authors", newText, function(data) {
+        if(data){
+            console.log(data);
+            alert("Yay! You have added an user!");
+        } 
+        else {
+            alert("Sorry that did not work");
+        }
+    });
+    
+    // $.post("/api/posts", NewText, function(data) {
+    //     if(data){
+    //         alert("Yay! You have added new text!");
+    //     } 
+    //     else {
+    //         alert("Sorry the text did not work");
+    //     }
+
+    //     $("#userName").val("");
+    //     $("#textBody").val("");
+    // });
+})
+
+</script>

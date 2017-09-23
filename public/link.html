@@ -256,28 +256,28 @@
     <div class="container is-fluid">
         <div class = "column is-6"> 
             <div class="field">
-                <label class="label">Name/Author</label>
+                <label class="label" id = "userName">Name/Author</label>
                 <div class="control">
                     <input class="input" type="text" placeholder="Text input">
                 </div>
             </div>
 
             <div class="field">
-                <label class="label">url</label>
+                <label class="label" id="url">url</label>
                 <div class="control">
                     <input class="input" type="text" placeholder="url link">
                 </div>
             </div>
 
             <div class="field">
-                <label class="label">image/video</label>
+                <label class="label" id="videoImage">image/video</label>
                 <div class="control">
                     <input class="input" type="text" placeholder="upload image or video here">
                 </div>
             </div>
 
             <div class="field">
-                <label class="label">Subject</label>
+                <label class="label" id="subject">Subject</label>
                 <div class="control">
                     <div class="select">
                     <select>
@@ -292,7 +292,7 @@
             </div>
 
             <div class="field">
-                <label class="label">Message (optional)</label>
+                <label class="label" id="textBody">Message (optional)</label>
                 <div class="control">
                     <textarea class="textarea" placeholder="Textarea"></textarea>
                 </div>
@@ -314,3 +314,18 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    $(".sumbit").on("click", function (event){
+        event.preventDefault();
+
+        var newLink = {
+            userName: $("#userName").val().trim(),
+            
+
+
+
+        }
+    })
+
+</script>
