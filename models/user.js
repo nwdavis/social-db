@@ -14,9 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: { 
         allowNull: false
       } 
-    });
-  }
-  User.associate = function(models) {
+    });    
     User.hasMany(models.Post, {
       onDelete: "CASCADE",
       foreignKey: { 
