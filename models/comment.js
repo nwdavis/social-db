@@ -26,9 +26,6 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       } 
     })
-  }
-
-  Comm.associate = function(models) {
     Comm.belongsTo(models.Post, {
       onDelete: "CASCADE",
       foreignKey: { 
