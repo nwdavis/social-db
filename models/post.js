@@ -21,14 +21,12 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-  }
-  Post.associate = function(models) {
     Post.hasMany(models.Comm, {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false
       } 
-    })
+    });
   }
 
   // Add a belongsTo association to Authors here
