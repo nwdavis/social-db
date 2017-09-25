@@ -1,6 +1,12 @@
 var db = require("../models");
 
 module.exports = function(app){
+  // Find all Authors and return them to the user with res.json
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({}).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
 
   //gets a single User by id
   app.get("/api/users/:id", function(req, res){

@@ -13,7 +13,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET all comments related to a post 
-  app.get("/api/commments", function(req, res) {
+  app.get("/api/commments/", function(req, res) {
     var query = {};
     if (req.query.post_id) {
       query.PostId = req.query.post_id;
@@ -40,7 +40,7 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/api/comments", function(req, res) {
+  app.post("/api/comments/", function(req, res) {
     console.log(req.body);
     db.Comm.create(req.body).then(function(dbComm) {
       res.json(dbComm);
