@@ -21,6 +21,12 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       } 
     });
+    User.hasOne(models.Login, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
   }
   return User;
 };
