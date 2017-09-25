@@ -1,4 +1,5 @@
 var crypto = require('crypto');
+var userPass = process.argv[2];
 
 var genRandomString = function(length){
   return crypto.randomBytes(Math.ceil(length/2))
@@ -6,11 +7,20 @@ var genRandomString = function(length){
           .slice(0,length);   
 };
 
+var newHash = function(userPass, salt) {
+  var data = userPass + salt;
+  var md5pw = crypto.createHash('md5').update(data).digest("hex");
+  console.log(data);
+  console.log(md5pw);
+}
+
 var salt = genRandomString(10);
-var data = "MyPass" + salt;
 
-var md5pw = crypto.createHash('md5').update(data).digest("hex");
+newHash(userPass, salt);
 
+
+//need an ajax call to get info from database
+//then we'll call chkPass with entered info and retrieved info
 
 
 
