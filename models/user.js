@@ -14,14 +14,18 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: { 
         allowNull: false
       } 
-    });
-  }
-  User.associate = function(models) {
+    });    
     User.hasMany(models.Post, {
       onDelete: "CASCADE",
       foreignKey: { 
         allowNull: false
       } 
+    });
+    User.hasOne(models.Login, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
     });
   }
   return User;
