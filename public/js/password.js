@@ -20,7 +20,8 @@ newHash(userPass, salt);
 
 
 //need an ajax call to get info from database
-//then we'll call chkPass with entered info and retrieved info
+
+
 
 
 
