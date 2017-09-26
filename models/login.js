@@ -4,11 +4,6 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Login = sequelize.define("Login", {
-    login_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      len: [1, 15]
-    },
     login_password: {
       type: DataTypes.STRING,
     },
