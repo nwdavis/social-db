@@ -1,5 +1,6 @@
 var db = require("../models");
 var crypto = require("crypto");
+var Sequelize = require("sequelize");
 
 module.exports = function(app){
   // Find all Authors and return them to the user with res.json
@@ -24,7 +25,7 @@ module.exports = function(app){
   // Must have the following as a JSON object:
   // name: 
   //
-  app.post("/api/users", function(req, res){
+  app.post("/api/user/create", function(req, res){
 
     console.log("Called User API for POST");
 
@@ -62,4 +63,18 @@ module.exports = function(app){
     });
   });
 
+  app.get("/api/user/:login", function(req, res) {
+    db.User.findOne({
+      where: {
+        name: req.params.login
+      },
+      include: [{
+          model: db.Login,
+          where: { UserId: Sequelize.col('User.id') }
+      }]
+      
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
 }
