@@ -13,10 +13,10 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET all comments related to a post 
-  app.get("/api/commments/", function(req, res) {
+  app.get("/api/comments", function(req, res) {
     var query = {};
-    if (req.query.post_id) {
-      query.PostId = req.query.post_id;
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
     }
     db.Comm.findAll({
       where: query
