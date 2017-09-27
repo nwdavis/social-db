@@ -16,6 +16,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //static directory
 app.use(express.static("public"));
+app.use("/posts", express.static("public"));
+
 
 //routes
 require("./routes/user-api-routes.js")(app);

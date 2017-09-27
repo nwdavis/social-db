@@ -17,9 +17,9 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/landing.html"));
     });
 
-    // cms route loads cms.html
-    app.get("/cms", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/cms.html"));
+    // Individual post page displays a post by id number
+    app.get("/posts/:id", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/viewPost.html"));
     });
 
     // blog route loads blog.html

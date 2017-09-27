@@ -1,6 +1,3 @@
-// *********************************************************************************
-// comment-api-routes.js - this file offers a set of routes for creating and manipulating comments
-// *********************************************************************************
 
 // Dependencies
 // =============================================================
@@ -12,26 +9,35 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+<<<<<<< HEAD
   // GET all comments related to a post 
   app.get("/api/comments", function(req, res) {
     var query = {};
     if (req.query.user_id) {
       query.UserId = req.query.user_id;
     }
+=======
+  // GET all comments related to a post - Returns JSON object of all comments related to a Post
+  // id = PostId
+  // 
+  app.get("/posts/api/post-comments/:id", function(req, res) {
+>>>>>>> 0a73bd464faf79d2ea8fff3a37f3e750a54b9f41
     db.Comm.findAll({
-      where: query
+      where: {
+        PostId: req.params.id
+      }
     }).then(function(dbComms) {
       res.json(dbComms);
     });
   });
 
-  // Get route for retrieving a single users comments
-  
-  //NOT CORRECT RIGHT NOW
-  app.get("/api/comments/:id", function(req, res) {
-    db.Post.findOne({
+  // GET method for finding a User's comments
+  // Returns a JSON object of all comments related to a user
+  // id = UserId
+  app.get("/posts/api/user-comments/:id", function(req, res) {
+    db.Comm.findAll({
       where: {
-        id: req.params.id
+        UserId: req.params.id
       }
     }).then(function(dbPost) {
       console.log(dbPost);
@@ -39,35 +45,45 @@ module.exports = function(app) {
     });
   });
 
-  // POST route for saving a new post
-  app.post("/api/comments/", function(req, res) {
+  // POST route for saving a new comment
+  // Must have the following as a JSON object:
+  // body:
+  // UserId:
+  // PostId:
+
+  app.post("/api/comments", function(req, res) {
     console.log(req.body);
     db.Comm.create(req.body).then(function(dbComm) {
       res.json(dbComm);
     });
   });
 
+  // ---EVERYTHING BELOW IS UNFINISHED---
   // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    db.Post.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbPost) {
-      res.json(dbPost);
-    });
-  });
+  //
+  // Need to get delete and edit calls working
+  //
+  //
+  // app.delete("/api/posts/:id", function(req, res) {
+  //   db.Post.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbPost) {
+  //     res.json(dbPost);
+  //   });
+  // });
 
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    db.Post.update(
-      req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      }).then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+  // // PUT route for updating posts
+  // app.put("/api/posts", function(req, res) {
+  //   db.Post.update(
+  //     req.body,
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(function(dbPost) {
+  //       res.json(dbPost);
+  //     });
+  // });
 };
