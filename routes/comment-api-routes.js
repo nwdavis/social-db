@@ -9,19 +9,10 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-<<<<<<< HEAD
-  // GET all comments related to a post 
-  app.get("/api/comments", function(req, res) {
-    var query = {};
-    if (req.query.user_id) {
-      query.UserId = req.query.user_id;
-    }
-=======
   // GET all comments related to a post - Returns JSON object of all comments related to a Post
   // id = PostId
   // 
   app.get("/posts/api/post-comments/:id", function(req, res) {
->>>>>>> 0a73bd464faf79d2ea8fff3a37f3e750a54b9f41
     db.Comm.findAll({
       where: {
         PostId: req.params.id
