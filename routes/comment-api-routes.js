@@ -12,7 +12,7 @@ module.exports = function(app) {
   // GET all comments related to a post - Returns JSON object of all comments related to a Post
   // id = PostId
   // 
-  app.get("/api/post-comments/:id", function(req, res) {
+  app.get("/posts/api/post-comments/:id", function(req, res) {
     db.Comm.findAll({
       where: {
         PostId: req.params.id
@@ -25,7 +25,7 @@ module.exports = function(app) {
   // GET method for finding a User's comments
   // Returns a JSON object of all comments related to a user
   // id = UserId
-  app.get("/api/user-comments/:id", function(req, res) {
+  app.get("/posts/api/user-comments/:id", function(req, res) {
     db.Comm.findAll({
       where: {
         UserId: req.params.id
