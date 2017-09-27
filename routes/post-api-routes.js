@@ -16,7 +16,7 @@ module.exports = function(app) {
 
   // GET method for finding a post by id
   // id = PostId
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/posts/api/posts/:id", function(req, res) {
     db.Post.findOne({
       where: {
         id: req.params.id
