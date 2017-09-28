@@ -74,8 +74,34 @@ module.exports = function(app){
       }]
       
     }).then(function(dbUser) {
+      if (dbUser === null){
+        throw err;
+      } else {
+        
+        res.json(dbUser);
       
-      res.json(dbUser);
+      }
     });
   });
 }
+
+
+//This function checks the pasword entered with the info from the database to authenticate the user
+//it then returns info to the front end which will be used to create local storage of the username and user ID (code below)
+//that local storage username can then be rendered wherever needed on the front end, and the user ID can be passed to the backend
+//to retrieve each users posts, etc.
+
+function checkPw(enteredPw, dbPw, dbSalt){
+  var data = enteredPw + dbSalt;
+  var md5pw = crypto.createHash('md5').update(data).digest("hex");
+
+  if (md5pw === dbPw){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// localStorage.setItem("validUser": "true");
+// localStorage.setItem("userId": XXXXXXX);
+// localStorage.setItem("userName": XXXXXXX);
