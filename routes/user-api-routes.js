@@ -30,7 +30,6 @@ module.exports = function(app){
     console.log("Called User API for POST");
 
     db.User.create(req.body).then(function(dbUser){
-      
       var userPass = req.body.login_password;
       
       var genRandomString = function(length){
