@@ -62,7 +62,7 @@ module.exports = function(app){
     });
   });
 
-  app.get("/api/user/:login", function(req, res) {
+  app.get("/api/user/:login/:pass", function(req, res) {
     db.User.findOne({
       where: {
         name: req.params.login
@@ -73,33 +73,32 @@ module.exports = function(app){
       }]
       
     }).then(function(dbUser) {
-      if (dbUser === null){
-        throw err;
-      } else {
-        
-        res.json(dbUser);
       
+      if (dbUser === null){
+        throw "User does not exist.";
+      } else {
+          //checks password by creating hash with incoming
+          function checkPw(enteredPw, dbPw, dbSalt){
+            var data = enteredPw + dbSalt;
+            var md5pw = crypto.createHash('md5').update(data).digest("hex");
+          
+            if (md5pw === dbPw){
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+        if (checkPw(req.params.pass, dbUser.Login.login_password, dbUser.Login.salt)) {
+          res.json(dbUser);
+        } else {
+          throw "Incorrect Password."
+        }
       }
     });
   });
 }
 
-
-//This function checks the pasword entered with the info from the database to authenticate the user
-//it then returns info to the front end which will be used to create local storage of the username and user ID (code below)
-//that local storage username can then be rendered wherever needed on the front end, and the user ID can be passed to the backend
-//to retrieve each users posts, etc.
-
-function checkPw(enteredPw, dbPw, dbSalt){
-  var data = enteredPw + dbSalt;
-  var md5pw = crypto.createHash('md5').update(data).digest("hex");
-
-  if (md5pw === dbPw){
-    return true;
-  } else {
-    return false;
-  }
-}
 
 // localStorage.setItem("validUser": "true");
 // localStorage.setItem("userId": XXXXXXX);
