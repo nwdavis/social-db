@@ -19,7 +19,7 @@ module.exports = function(app) {
 
     // Individual post page displays a post by id number
     app.get("/posts/:id", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/view.html"));
+        res.sendFile(path.join(__dirname, "../public/viewPost.html"));
     });
 
     // blog route loads blog.html

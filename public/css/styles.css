@@ -1,0 +1,63 @@
+/****************************************
+    Begin Blue Belt Coding Ninja CSS
+****************************************/
+
+
+/*******************************
+          NAVIGATION
+*******************************/
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* background-color: #282f2f; */
+}
+
+.field1 {
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#buttonUser {
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#buttonSubmit {
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+/*******************************
+            BODY
+*******************************/
+
+.hero-body {
+    /* background-color: #282f2f; */
+    margin-top: 45px;
+}
+
+.field2 {
+    margin-top: 50px;
+}
+
+
+/*******************************
+            FOOTER
+*******************************/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95px;
+    /*  background-color: #282f2f; */
+    text-align: center;
+}

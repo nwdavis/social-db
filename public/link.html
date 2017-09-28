@@ -1,0 +1,210 @@
+<!-- Begin Purple Belt Coding Ninja HTML -->
+<!DOCTYPE html>
+
+<!-- What language do we speak? -->
+<html lang="en">
+
+<!-- Head Info Here -->
+
+<head>
+
+    <!-- Meta Info -->
+    <meta charset="UTF-8">
+
+    <!-- Description of Web Page Info -->
+    <meta name="description" content="codeIt - like reddit only cooler">
+
+    <!-- Keywords of Web Page  Info -->
+    <meta name="keywords" content="codeIt, code, it">
+
+    <!-- The important people -->
+    <meta name="author" content="Alan Durham, Kevin Gulledge, Nathaniel Davis, Rafael Ortiz, Raven Williams">
+
+    <!-- Mobility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+
+    <!-- Bulma CDN Link -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>codeIt</title>
+
+</head>
+
+<!-- Body of Page Here -->
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+            <figure class="image is-64x64">
+                <a href="landing.html"> <img src="img/PBS_Logo-1.png" /></a>
+            </figure>
+
+            <a class="navbar-item" href="landing.html" alt="codeIt: like reddit but better!">codeIt</a>
+
+            <div class="navbar-burger burger" data-target="navMenuTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navMenuTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link  is-active" href="subject/subject.html">
+                                Subjects
+                              </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item " href="subject/general.html">
+                                  General
+                                </a>
+                        <a class="navbar-item " href="subject/resources.html">
+                                  Resources
+                                </a>
+                        <a class="navbar-item " href="subject/careers.html">
+                                  Careers
+                                </a>
+                        <a class="navbar-item " href="subject/random.html">
+                                  Random
+                                </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link " href="about/about.html">
+                                About
+                              </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item " href="about/class.html">
+                                          Class
+                                        </a>
+                        <a class="navbar-item " href="about/group.html">
+                                          Group
+                                        </a>
+                        <a class="navbar-item " href="about/project.html">
+                                          Project
+                                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Search">
+                </p>
+                <p class="control">
+                    <a class="button is-info">
+                            Search
+                          </a>
+                </p>
+            </div>
+
+            <br>
+
+            <div class="field1">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="userName">
+                    <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                    <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                          </span>
+                </p>
+            </div>
+            <div class="field1">
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                          </span>
+                </p>
+            </div>
+            <div class="field1">
+                <p class="control">
+                    <button class="button is-success">
+                            Login
+                          </button>
+                </p>
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- FORM AREA -->
+    <br>
+    <br>
+    <div class="container is-centered">
+        <div class="column is-6">
+            <div class="field2">
+                <label class="label">Name/Author</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">url</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="url link">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">image/video</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="upload image or video here">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Subject</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                        <option>Select dropdown</option>
+                        <option>Resources</option>
+                        <option>Careers</option>
+                        <option>Classes</option>
+                        <option>Random</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Message (optional)</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-light">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

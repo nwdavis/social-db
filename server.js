@@ -16,6 +16,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //static directory
 app.use(express.static("public"));
+app.use("/posts", express.static("public"));
+
 
 //routes
 require("./routes/user-api-routes.js")(app);
@@ -30,7 +32,7 @@ app.set("view engine", "handlebars");
 
 
 //starts the server INCLUDES FORCE TRUE, TAKE OUT AFTER TESTING!!!!!!!!!!
-db.sequelize.sync({force:true}).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

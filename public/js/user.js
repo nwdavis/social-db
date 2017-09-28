@@ -74,7 +74,7 @@ $(document).ready(function() {
   function renderEmpty() {
     var alertDiv = $("<div>");
     alertDiv.addClass("alert alert-danger");
-    alertDiv.html("You must create an Author before you can create a Post.");
+    alertDiv.html("You must create an User before you can create a Post.");
     userContainer.append(alertDiv);
   }
 
