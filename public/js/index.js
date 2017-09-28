@@ -62,48 +62,47 @@ $(document).ready(function() {
         postContainer.append(postsToAdd);
     }
 
-  // This function constructs a post's HTML
-  function createNewRow(post) {
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    var newPostPanel = $("<div>");
-    newPostPanel.addClass("panel panel-default");
-    var newPostPanelHeading = $("<div>");
-    newPostPanelHeading.addClass("panel-heading");
-    var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-info");
-    var newPostTitle = $("<h2>");
-    var newPostDate = $("<small>");
-    var newPostUser = $("<h5>");
-    // newPostUser.text("Written by: " + post.id);
-    newPostUser.css({
-      float: "right",
-      color: "blue",
-      "margin-top":
-      "-10px"
-    });
-    var newPostPanelBody = $("<div>");
-    newPostPanelBody.addClass("panel-body");
-    var newPostBody = $("<p>");
-    newPostTitle.html(`<a href="posts/${post.id}">` + post.title + "</a>" + " " + " ");
-    newPostBody.text(post.body);
-    newPostDate.text(formattedDate);
-    newPostUser.text("Written by:  " + post.id + " " + post.name);
-    newPostTitle.append(newPostDate);
-    // newPostPanelHeading.append(deleteBtn);
-    // newPostPanelHeading.append(editBtn);
-    newPostPanelHeading.append(newPostTitle);
-    newPostPanelHeading.append(newPostUser);
-    newPostPanelBody.append(newPostBody);
-    newPostPanel.append(newPostPanelHeading);
-    newPostPanel.append(newPostPanelBody);
-    newPostPanel.data("post", post);
-    return newPostPanel;
-  }
+    // This function constructs a post's HTML
+    function createNewRow(post) {
+        var formattedDate = new Date(post.createdAt);
+        formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+        var newPostPanel = $("<div>");
+        newPostPanel.addClass("panel panel-default");
+        var newPostPanelHeading = $("<div>");
+        newPostPanelHeading.addClass("panel-heading");
+        var deleteBtn = $("<button>");
+        deleteBtn.text("x");
+        deleteBtn.addClass("delete btn btn-danger");
+        var editBtn = $("<button>");
+        editBtn.text("EDIT");
+        editBtn.addClass("edit btn btn-info");
+        var newPostTitle = $("<h2>");
+        var newPostDate = $("<small>");
+        var newPostUser = $("<h5>");
+        // newPostUser.text("Written by: " + post.id);
+        newPostUser.css({
+            float: "right",
+            color: "blue",
+            "margin-top": "-10px"
+        });
+        var newPostPanelBody = $("<div>");
+        newPostPanelBody.addClass("panel-body");
+        var newPostBody = $("<p>");
+        newPostTitle.html(`<a href="posts/${post.id}">` + post.title + "</a>" + " " + " ");
+        newPostBody.text(post.body);
+        newPostDate.text(formattedDate);
+        newPostUser.text("Written by:  " + post.id + " " + post.name);
+        newPostTitle.append(newPostDate);
+        // newPostPanelHeading.append(deleteBtn);
+        // newPostPanelHeading.append(editBtn);
+        newPostPanelHeading.append(newPostTitle);
+        newPostPanelHeading.append(newPostUser);
+        newPostPanelBody.append(newPostBody);
+        newPostPanel.append(newPostPanelHeading);
+        newPostPanel.append(newPostPanelBody);
+        newPostPanel.data("post", post);
+        return newPostPanel;
+    }
 
     // This function figures out which post we want to delete and then calls deletePost
     function handlePostDelete() {
