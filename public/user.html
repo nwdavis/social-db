@@ -28,19 +28,25 @@
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="css/reset.css">
 
-    <!-- CSS Style Sheet -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
     <!-- Bulma CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
 
+    <!-- Bulma Darkly Theme -->
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css">
+
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- JQuery -->
-     <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Nav Bar Script -->
-    <script src="js/navbar.js"></script>
 
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Nav Bar Script 
+    <script src="js/navbar.js"></script> -->
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Title of this Awesome Webiste -->
     <title>codeIt</title>
 
 </head>
@@ -52,23 +58,12 @@
     <!-- Nav Bar -->
     <nav class="navbar is-transparent">
         <div class="navbar-brand">
+
             <figure class="image is-64x64">
-                <a href="landing.html" target="_blank"> <img src="img/PBS_Logo-1.png" /></a>
+                <a href="landing.html"> <img src="img/PBS_Logo-1.png" /></a>
             </figure>
 
-            <a class="navbar-item" href="index.html" target="_blank" alt="codeIt: like reddit but better!">codeIt</a>
-
-            <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
-                <span class="icon" style="color: #333;">
-                          <i class="fa fa-lg fa-github"></i>
-                        </span>
-            </a>
-
-            <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
-                <span class="icon" style="color: #55acee;">
-                          <i class="fa fa-lg fa-twitter"></i>
-                        </span>
-            </a>
+            <a class="navbar-item" href="landing.html" alt="codeIt: like reddit but better!">codeIt</a>
 
             <div class="navbar-burger burger" data-target="navMenuTransparentExample">
                 <span></span>
@@ -80,7 +75,7 @@
         <div id="navMenuTransparentExample" class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link  is-active" href="subject/subject.html">
+                    <a class="navbar-link" href="subject/subject.html">
                             Subjects
                           </a>
                     <div class="navbar-dropdown is-boxed">
@@ -115,47 +110,94 @@
                     </div>
                 </div>
             </div>
-    </nav> 
-<!-- FORM AREA -->
 
-<br>
-<br> 
-<div class="row">
-    <div class="col-md-4 col-md-offset-2">
-        <div class="user-container">
-            <h1><strong>Users</strong></h1>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>User</th>
-                        <th>See User's Posts</th>
-                        <th>New Post</th>
-                        <th>Delete User</th> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="form-row">
-                        <form id="user-form">
-                            <td colspan="4">
-                                <input placeholder="Enter a name" id="user-name" type="text" />
-                            </td>
-                            <td><button type="submit" class="btn btn-success">Create User</button>
-                            </td>
-                        </form>
-                    </tr>
-                </tbody>
-            </table>
+            <br>
+
+            <a href="user.html" class="button is-primary is-inverted is-small" id="buttonUser" type="submit">New User</a>
+            <a href="post.html" class="button is-primary is-inverted is-small" id="buttonSubmit" type="submit">Submit a new link</a>
+
+
+            <div class="field1">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="userName">
+                    <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                  </span>
+                    <span class="icon is-small is-right">
+                                    <i class="fa fa-check"></i>
+                                  </span>
+                </p>
+            </div>
+            <div class="field1">
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                  </span>
+                </p>
+            </div>
+            <div class="field1">
+                <p class="control">
+                    <button class="button is-success">
+                                    Login
+                                </button>
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FORM AREA -->
+
+    <br>
+    <br>
+    <div class="container is-fluid">
+
+        <div class="field">
+            <form id="newUserForm">
+                <label class="label">User Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Enter your desired user name" name="user-name" id="user-name" required>
+                </div>
+                <br>
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="Enter Password" name="psw" id="password-1" required>
+                </div>
+                <br>
+                <label class="label">Repeat Password</label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="Repeat Password" name="psw-repeat" id="password-2" required>
+                </div>
+                <br>
+                <div class="control">
+                    <label class="checkbox">
+                            <input type="checkbox">
+                            Remember Me
+                          </label>
+                </div>
+                <div id="passwordMatchAlert"></div>
+                <br>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-primary">Sign Up</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-danger">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</div>
 
-    
-<!-- Custom Script -->
+    <!-- Moment.js  Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
 
-<script src="js/user.js" type="text/javascript"></script>
+    <!-- Our very own javascript files -->
+    <script src="js/user.js" type="text/javascript"></script>
+
+    <!-- Bulma Javascript File for the modal -->
+    <script src="http://bulma.io/lib/main.js"></script>
 
 </body>
 
 </html>
-

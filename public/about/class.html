@@ -1,3 +1,4 @@
+<!-- Begin Purple Belt Coding Ninja HTML -->
 <!DOCTYPE html>
 
 <!-- What language do we speak? -->
@@ -17,7 +18,7 @@
     <meta name="keywords" content="codeIt, code, it">
 
     <!-- The important people -->
-    <meta name="author" content="Alan Durham, Kevin Gulledge, Nathaniel Davis, Rafael Ortiz, Raven Lawton">
+    <meta name="author" content="Alan Durham, Kevin Gulledge, Nathaniel Davis, Rafael Ortiz, Raven Williams">
 
     <!-- Mobility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,12 +31,19 @@
     <!-- Bulma CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
 
+    <!-- Bulma Darkly Theme -->
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css">
+
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Nav Bar Script -->
-    <script src="../js/navbar.js"></script>
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Title of this Awesome Webiste -->
     <title>codeIt</title>
 
 </head>
@@ -99,55 +107,86 @@
                 </div>
             </div>
 
-            <div class="field is-grouped">
-                <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Search">
-                </p>
-                <p class="control">
-                    <a class="button is-info">
-                        Search
-                      </a>
-                </p>
-            </div>
-
             <br>
 
-            <div class="field">
+            <a href="../user.html" class="button is-primary is-inverted is-small" id="buttonUser" type="submit">New User</a>
+            <a href="../post.html" class="button is-primary is-inverted is-small" id="buttonSubmit" type="submit">Submit a new link</a>
+
+
+            <div class="field1">
                 <p class="control has-icons-left has-icons-right">
                     <input class="input" type="email" placeholder="userName">
                     <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                      </span>
+                            <i class="fa fa-envelope"></i>
+                          </span>
                     <span class="icon is-small is-right">
-                        <i class="fa fa-check"></i>
-                      </span>
+                            <i class="fa fa-check"></i>
+                          </span>
                 </p>
             </div>
-            <div class="field">
+            <div class="field1">
                 <p class="control has-icons-left">
                     <input class="input" type="password" placeholder="Password">
                     <span class="icon is-small is-left">
-                        <i class="fa fa-lock"></i>
-                      </span>
+                            <i class="fa fa-lock"></i>
+                          </span>
                 </p>
             </div>
-            <div class="field">
+            <div class="field1">
                 <p class="control">
                     <button class="button is-success">
-                        Login
-                      </button>
+                            Login
+                        </button>
                 </p>
             </div>
-
-        </div>
         </div>
     </nav>
 
+    <br>
+    <br>
+
     <div class="container is-fluid">
 
+        <article class="message is-info">
+            <div class="message-header">
+                <p>UNC Charlotte Web Development Bootcamp Information</p>
+            </div>
+            <div class="message-body">
+                <p>
+                    Web Development is one of the fastest growing careers in today’s economy with a projected 20% growth rate by 2022.* The Coding Boot Camp at UNC Charlotte was designed to help students to develop the skills and network needed to capitalize on this high-demand
+                    career track. Students learn HTML5, CSS3, JavaScript, jQuery, Bootstrap, React.js, Node.js, C#, .Net, Database Theory, Bookshelf.js, MongoDB, MySQL, Command Line, Git, and more.
+                </p>
+            </div>
+        </article>
+
+        <article class="message is-info">
+            <div class="message-header">
+                <p>About UNC Charlotte</p>
+            </div>
+            <div class="message-body">
+                <p>
+                    The University of North Carolina at Charlotte is North Carolina’s urban research university. It leverages its location in the state’s largest city to offer internationally competitive programs of research and creative activity; exemplary undergraduate,
+                    graduate, and professional programs; and a focused set of community engagement initiatives. A doctoral/research-intensive institution, UNC Charlotte is the fourth largest of the 16 constituent members of the University of North Carolina
+                    and the largest institution of higher education in the Charlotte region. The 1,000-acre campus holds more than 60 buildings, including residence halls, academic and student support buildings, and the J. Murrey Atkins Library, which
+                    contains more than one million volumes, state-of-the-art computer labs, and various special collections. UNC Charlotte’s Office of Continuing Education is conveniently located at the Center City campus in the First Ward of Uptown Charlotte.
+                    Amenities available at the Center City campus include a bookstore, student resource room, Einstein Bros Bagels, and the Projective Eye Art Gallery.
+                </p>
+            </div>
+        </article>
 
 
     </div>
+
+    <!-- Moment.js  Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+
+    <!-- Our very own javascript files -->
+    <script src="../js/index.js" type="text/javascript"></script>
+    <script src="../js/comment.js" type="text/javascript"></script>
+
+    <!-- Bulma Javascript File for the modal -->
+    <script src="http://bulma.io/lib/main.js"></script>
+
 
 </body>
 
