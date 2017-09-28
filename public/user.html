@@ -121,33 +121,26 @@
 <br>
 <br> 
 <div class="row">
-    <div class="col-md-4 col-md-offset-2">
-        <div class="user-container">
-            <h1><strong>Users</strong></h1>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>User</th>
-                        <th>See User's Posts</th>
-                        <th>New Post</th>
-                        <th>Delete User</th> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="form-row">
-                        <form id="user-form">
-                            <td colspan="4">
-                                <input placeholder="Enter a name" id="user-name" type="text" />
-                            </td>
-                            <td><button type="submit" class="btn btn-success">Create User</button>
-                            </td>
-                        </form>
-                    </tr>
-                </tbody>
-            </table>
+    <form id="newUserForm">
+        <div>
+          <label><b>User Name</b></label>
+          <input type="text" placeholder="Enter your desired user name" name="user-name" id="user-name" required>
+      
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="password-1" required>
+      
+          <label><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="password-2" required>
+          <input type="checkbox" checked="checked"> Remember me
+
+          <div id="passwordMatchAlert"></div>
+      
+          <div>
+            <button type="button" id="cancel-btn">Cancel</button>
+            <button type="submit" id="new-user-submit" >Sign Up</button>
+          </div>
         </div>
-    </div>
+    </form>
 </div>
 
     
