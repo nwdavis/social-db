@@ -74,6 +74,7 @@ module.exports = function(app){
       }]
       
     }).then(function(dbUser) {
+      
       res.json(dbUser);
     });
   });
