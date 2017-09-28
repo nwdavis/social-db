@@ -48,6 +48,14 @@
     margin-top: 50px;
 }
 
+.tile {
+    align: center;
+}
+
+.container {
+    margin-top: 45px;
+}
+
 
 /*******************************
             FOOTER
@@ -57,7 +65,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 95px;
+    height: 10%;
     /*  background-color: #282f2f; */
     text-align: center;
 }
