@@ -88,13 +88,12 @@ $(document).ready(function() {
         var newPostPanelBody = $("<div>");
         newPostPanelBody.addClass("panel-body");
         var newPostBody = $("<p>");
-        // newPostTitle.html(`<a href="posts/${post.id}">` + post.title + "</a>" + " " + " ");
         newPostTitle.html(`<a href="posts/${post.id}">` + post.title + "</a>" + " " + " ");
         newPostBody.text(post.body);
         newPostDate.text(formattedDate);
         newPostUser.text("Written by:  " + post.id + " " + post.name);
         newPostTitle.append(newPostDate);
-        newPostPanelHeading.append(deleteBtn);
+        // newPostPanelHeading.append(deleteBtn);
         // newPostPanelHeading.append(editBtn);
         newPostPanelHeading.append(newPostTitle);
         newPostPanelHeading.append(newPostUser);
