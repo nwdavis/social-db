@@ -11,7 +11,9 @@ $(document).ready(function() {
     })
     .done(function(userObj) {
       
-      localStorage.setItem("currentUser", JSON.stringify(userObj));   
+      localStorage.setItem("currentUser", JSON.stringify(userObj));
+      
+      window.location.href = "/"
 
     });
   });
