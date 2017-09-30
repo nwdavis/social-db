@@ -108,32 +108,32 @@
             <a href="post.html" class="button is-primary is-inverted is-small" id="buttonSubmit" type="submit">Submit a new link</a>
 
 
-            <div class="field1">
-                <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="userName" id="userName">
-                    <span class="icon is-small is-left">
-                                    <i class="fa fa-envelope"></i>
-                                  </span>
-                    <span class="icon is-small is-right">
-                                    <i class="fa fa-check"></i>
-                                  </span>
-                </p>
-            </div>
-            <div class="field1">
-                <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password" id="pass">
-                    <span class="icon is-small is-left">
-                                    <i class="fa fa-lock"></i>
-                                  </span>
-                </p>
-            </div>
-            <div class="field1">
-                <p class="control">
-                    <button class="button is-success" id="login-button">
-                                    Login
-                                </button>
-                </p>
-            </div>
+            <div class="field1" id="login-user-name">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="userName" id="userName">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                        <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                          </span>
+                    </p>
+                </div>
+                <div class="field1" id="login-password">
+                    <p class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password" id="pass">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                          </span>
+                    </p>
+                </div>
+                <div class="field1" id="login-button-wrapper">
+                    <p class="control">
+                        <button class="button is-success" id="login-button">
+                            Login
+                        </button>
+                    </p>
+                </div>
         </div>
     </nav>
 
@@ -156,7 +156,15 @@
             </div>
         </div>
         <br>
-
+         <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+                <div class="select">
+                      <select class="form-control" id="subjects"></select>
+                </div>
+            </div>
+        </div> 
+        <br>
         <div class="field is-grouped">
             <div class="control">
                 <button class="button is-primary" id="new-post-submit">Submit</button>
