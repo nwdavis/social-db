@@ -117,7 +117,7 @@
             </div>
         </div>
 
-        <div id="navMenuTransparentExample" class="navbar-menu">
+        <div id="navMenuTransparentExample" class="navbar-menu" style: "hidden">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link " href="subject/subject.html">
@@ -160,37 +160,39 @@
             <a href="user.html" class="button is-primary is-inverted is-small" id="buttonUser" type="submit">New User</a>
             <a href="post.html" class="button is-primary is-inverted is-small" id="buttonSubmit" type="submit">Submit a new link</a>
 
+            <div id="login-form">
+                <div class="field1">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="userName" id="userName">
+                        <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                        <span class="icon is-small is-right">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                    </p>
+                </div>
+                <div class="field1">
+                    <p class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password" id="pass">
+                        <span class="icon is-small is-left">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                    </p>
+                </div>
+                <div class="field1">
+                    <p class="control">
 
-            <div class="field1">
-                <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="userName" id="userName">
-                    <span class="icon is-small is-left">
-                                    <i class="fa fa-envelope"></i>
-                                  </span>
-                    <span class="icon is-small is-right">
-                                    <i class="fa fa-check"></i>
-                                  </span>
-                </p>
+                        <button class="button is-success">
+                                        Login
+                                    </button>
+                        <button class="button is-success">
+                                        Login
+                                    </button>
+                    </p>
+                </div>
             </div>
-            <div class="field1">
-                <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password" id="pass">
-                    <span class="icon is-small is-left">
-                                    <i class="fa fa-lock"></i>
-                                  </span>
-                </p>
-            </div>
-            <div class="field1">
-                <p class="control">
-
-                    <button class="button is-success">
-                                    Login
-                                </button>
-                    <button class="button is-success">
-                                    Login
-                                </button>
-                </p>
-            </div>
+            <div id="user-name-field"></div>
         </div>
     </nav>
 

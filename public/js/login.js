@@ -10,12 +10,22 @@ $(document).ready(function() {
       url: `/api/user/${userName}/${userPass}`
     })
     .done(function(userObj) {
-      
+     
       localStorage.setItem("currentUser", JSON.stringify(userObj));
+      localStorage.setItem("loggedIn", true);
       
       window.location.href = "/"
 
     });
+  });
+  
+  $("#logout-button").on("click", function(){
+    
+    localStorage.removeItem("currentUser");
+    localStorage.setItem("loggedIn", false)
+
+    window.location.href = "/"
+    
   });
 
 });
