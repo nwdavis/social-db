@@ -48,51 +48,7 @@
 
     <!-- Title of this Awesome Webiste -->
     <title>codeIt</title>
-    <!--style>
-        #title {
-            border-radius: 25px;
-            border: 2px solid #1E90FF;
-            margin-top: 50px;
-            margin-left: 25px;
-            padding: 20px;
-            margin-bottom: 50px;
-            width: 1200px;
-            height: 25px;
-            font-size: 20px;
-        }
-        
-        #body {
-            border-radius: 25px;
-            border: 2px solid #1E90FF;
-            padding: 20px;
-            width: 1200px;
-            height: 150px;
-            margin-bottom: 50px;
-            margin-left: 25px;
-            font-size: 20px;
-        }
-        
-        #submit-button {
-            padding: 12px 28px;
-            border-radius: 4px;
-            background-color: #1E90FF;
-            /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 4px 2px;
-            cursor: pointer;
-            margin-left: 25px;
-        }
-        
-        #user-group {
-            margin-left: 25px;
-        }
-    </style> -->
+    
 
 </head>
 
@@ -152,39 +108,32 @@
             <a href="user.html" class="button is-primary is-inverted is-small" id="buttonUser" type="submit">New User</a>
             <a href="post.html" class="button is-primary is-inverted is-small" id="buttonSubmit" type="submit">Submit a new link</a>
 
-            <div id="login-form">
-                <div class="field1">
+            <div class="field1" id="login-user-name">
                     <p class="control has-icons-left has-icons-right">
                         <input class="input" type="email" placeholder="userName" id="userName">
                         <span class="icon is-small is-left">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
+                            <i class="fa fa-envelope"></i>
+                          </span>
                         <span class="icon is-small is-right">
-                                        <i class="fa fa-check"></i>
-                                    </span>
+                            <i class="fa fa-check"></i>
+                          </span>
                     </p>
                 </div>
-                <div class="field1">
+                <div class="field1" id="login-password">
                     <p class="control has-icons-left">
                         <input class="input" type="password" placeholder="Password" id="pass">
                         <span class="icon is-small is-left">
-                                        <i class="fa fa-lock"></i>
-                                    </span>
+                            <i class="fa fa-lock"></i>
+                          </span>
                     </p>
                 </div>
-                <div class="field1">
+                <div class="field1" id="login-button-wrapper">
                     <p class="control">
-
-                        <button class="button is-success">
-                                        Login
-                                    </button>
-                        <button class="button is-success">
-                                        Login
-                                    </button>
+                        <button class="button is-success" id="login-button">
+                            Login
+                        </button>
                     </p>
                 </div>
-            </div>
-            <div id="user-name-field"></div>
         </div>
     </nav>
 
@@ -207,6 +156,7 @@
         </article>
 
         <br>
+        <div id="commentBox"></div>
         <br>
 
         <article class="media">
@@ -219,7 +169,7 @@
                 <nav class="level">
                     <div class="level-left">
                         <div class="level-item">
-                            <a class="button is-info" id="submit-comment">Submit</a>
+                            <button class="button is-info" id="submit-comment">Submit</button>
                         </div>
                     </div>
 
