@@ -143,3 +143,8 @@ $(document).ready(function() {
     }
 
 });
+
+// this removes the modal once closed out
+jQuery('#modal-card').on('hidden', function(e) {
+    jQuery(this).remove();
+});

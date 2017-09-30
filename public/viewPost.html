@@ -48,51 +48,51 @@
 
     <!-- Title of this Awesome Webiste -->
     <title>codeIt</title>
-<style>
-    #title{
-        border-radius: 25px;
-        border: 2px solid #1E90FF;
-        margin-top: 50px;
-        margin-left: 25px;
-        padding: 20px; 
-        margin-bottom: 50px;
-        width: 1200px;
-        height: 25px;
-        font-size: 20px;
-    }
-
-    #body{
-        border-radius: 25px;
-        border: 2px solid #1E90FF;
-        padding: 20px; 
-        width: 1200px;
-        height: 150px;
-        margin-bottom: 50px;
-        margin-left: 25px;
-        font-size: 20px;
-    }
-
-    #submit-button {
-        padding: 12px 28px;
-        border-radius: 4px;
-        background-color: #1E90FF; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-        margin-left: 25px;
-    }
-
-    #user-group{
-        margin-left: 25px;
-    }
-
-</style>
+    <style>
+        #title {
+            border-radius: 25px;
+            border: 2px solid #1E90FF;
+            margin-top: 50px;
+            margin-left: 25px;
+            padding: 20px;
+            margin-bottom: 50px;
+            width: 1200px;
+            height: 25px;
+            font-size: 20px;
+        }
+        
+        #body {
+            border-radius: 25px;
+            border: 2px solid #1E90FF;
+            padding: 20px;
+            width: 1200px;
+            height: 150px;
+            margin-bottom: 50px;
+            margin-left: 25px;
+            font-size: 20px;
+        }
+        
+        #submit-button {
+            padding: 12px 28px;
+            border-radius: 4px;
+            background-color: #1E90FF;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            margin-left: 25px;
+        }
+        
+        #user-group {
+            margin-left: 25px;
+        }
+    </style>
 
 </head>
 
@@ -182,60 +182,59 @@
             </div>
             <div class="field1">
                 <p class="control">
-<<<<<<< HEAD
-                    <button class="button is-success" id="login-button">
-                        Login
-                      </button>
-=======
+
                     <button class="button is-success">
                                     Login
                                 </button>
->>>>>>> raven
+                    <button class="button is-success">
+                                    Login
+                                </button>
                 </p>
             </div>
         </div>
     </nav>
 
     <!-- PAGE BODY -->
-
     <br>
     <br>
 
     <div class="container is-fluid">
-        <div class="row">
-            <div id="postBox">
+        <article class="message is-info">
+            <div class="message-header">
+                <p id="title">
 
+                </p>
             </div>
-        </div>
+            <div class="message-body">
+                <p id="message">
 
-        <div class="row">
+                </p>
+            </div>
+        </article>
 
-            <div class="col-6 col-lg-12">
-                <!--
-                <h2><strong>post</strong></h2> -->
-                <div id="commentBox">
+        <br>
+        <br>
 
+        <article class="media">
+            <div class="media-content">
+                <div class="field">
+                    <p class="control">
+                        <textarea class="textarea" placeholder="Add a comment..." id="comment"></textarea>
+                    </p>
                 </div>
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <a class="button is-info" id="submit-comment">Submit</a>
+                        </div>
+                    </div>
+
+                </nav>
             </div>
-            <!--span-->
-
-        </div>
-    </div>
-    <!--/span-->
-
-    <!--span-->
+        </article>
 
     </div>
-    <!--row-->
-
-    <hr>
-
-    </div>
-    <!--.container-->
-
-    </div>
-
-    </div>
+    <!--
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
@@ -250,13 +249,15 @@
                 </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Custom Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
     <script src="js/viewPost.js" type="text/javascript"></script>
     <script src="js/login.js" type="text/javascript"></script>
 
+    <!-- Bulma Javascript File for the modal -->
+    <script src="http://bulma.io/lib/main.js"></script>
 
 </body>
 
