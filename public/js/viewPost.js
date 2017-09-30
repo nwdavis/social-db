@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    var currentUser = JSON.parse(localStorage.getItem("currentUser"));
     var url = window.location.href;
     console.log(url);
     var postId = url.split('')[url.length - 1];

@@ -2,6 +2,8 @@ $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and user select
   var bodyInput = $("#body");
   var titleInput = $("#title");
+
+  var currentUser = JSON.parse(localStorage.getItem("currentUser"));
   
   // var userSelect = $("#user");
   // Adding an event listener for when the form is submitted
