@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     var currentUser = JSON.parse(localStorage.getItem(currentUser));
     if(currentUser){
-        userLoggedIn = true    
+        userLoggedIn = true;   
     }
 
     // postContainer holds all of our posts
