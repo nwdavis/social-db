@@ -2,10 +2,11 @@ $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and user select
   var bodyInput = $("#body");
   var titleInput = $("#title");
-  var linkForm = $("#link");
-  var userSelect = $("#user");
+  
+  // var userSelect = $("#user");
   // Adding an event listener for when the form is submitted
-  $(linkForm).on("submit", handleFormSubmit);
+  $(document).on("click", "#new-post-submit", handleFormSubmit);
+  // $(linkForm).on("submit", handleFormSubmit);
   // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
   var url = window.location.search;
   var postId;
@@ -31,7 +32,8 @@ $(document).ready(function() {
   function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body, title, or user
-    if (!titleInput.val().trim() || !bodyInput.val().trim() || !userSelect.val()) {
+    if (!titleInput.val().trim() || !bodyInput.val().trim()) {
+      console.log("ERROR!");
       return;
     }
     // Constructing a newPost object to hand to the database
@@ -42,7 +44,7 @@ $(document).ready(function() {
       body: bodyInput
         .val()
         .trim(),
-      UserId: userSelect.val()
+      UserId: currentUser.id
     };
 
     // If we're updating a post run updatePost to update a post

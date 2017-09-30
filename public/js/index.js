@@ -1,11 +1,17 @@
 $(document).ready(function() {
     /* global moment */
+    var userLoggedIn = false;
+
+    var currentUser = JSON.parse(localStorage.getItem(currentUser));
+    if(currentUser){
+        userLoggedIn = true    
+    }
 
     // postContainer holds all of our posts
     var postContainer = $("#postContainer");
     var postCategorySelect = $("#category");
     // Click events for the edit and delete buttons
-    $(document).on("click", "button.delete", handlePostDelete);
+    // $(document).on("click", "button.delete", handlePostDelete);
     //   $(document).on("click", "button.edit", handlePostEdit);
     // Variable to hold our posts
     var posts;
@@ -79,7 +85,7 @@ $(document).ready(function() {
         var newPostTitle = $("<h2>");
         var newPostDate = $("<small>");
         var newPostUser = $("<h5>");
-        // newPostUser.text("Written by: " + post.id);
+        // newPostUser.text("Written by: " + post.id + post.User.name);
         newPostUser.css({
             float: "right",
             color: "blue",
@@ -91,9 +97,9 @@ $(document).ready(function() {
         newPostTitle.html(`<a href="posts/${post.id}">` + post.title + "</a>" + " " + " ");
         newPostBody.text(post.body);
         newPostDate.text(formattedDate);
-        newPostUser.text("Written by:  " + post.id + " " + post.name);
+        // newPostUser.text("Written by:  " + post.id + " " + post.User.name);
         newPostTitle.append(newPostDate);
-        // newPostPanelHeading.append(deleteBtn);
+        newPostPanelHeading.append(deleteBtn);
         // newPostPanelHeading.append(editBtn);
         newPostPanelHeading.append(newPostTitle);
         newPostPanelHeading.append(newPostUser);
