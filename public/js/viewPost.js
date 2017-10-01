@@ -58,6 +58,9 @@ $(document).ready(function() {
         $("#message").text(postInfo.body);
         comments.forEach(function(comment) {
             var nextComm = $("<div>");
+            nextComm.addClass("message");
+            nextComm.addClass("is-success");
+            nextComm.css("color", "black");
             nextComm.text(comment.body);
             $("#commentBox").append(nextComm)
         })

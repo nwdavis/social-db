@@ -8,6 +8,9 @@ $(document).ready(function() {
     console.log("Submit function called");
     event.preventDefault();
 
+    localStorage.setItem("loggedIn", false);
+    localStorage.removeItem("currentUser");
+
     var userNameInput = $("#user-name");
     var password1 = $("#password-1").val().trim();
     var password2 = $("#password-2").val().trim();
@@ -35,6 +38,8 @@ $(document).ready(function() {
   function upsertUser(userData) {
     $.post("/api/user/create", userData)
       .then(function(){
+        localStorage.setItem("currentUser", JSON.stringify(userData));
+        localStorage.setItem("loggedIn", true);
         window.location = "/"
       });
   }
