@@ -11,7 +11,7 @@ $(document).ready(function() {
       $("#login-password").html(`<p>${currentUser.name}</p>`);
       $("#login-button-wrapper").html("<p class='control'><button class='button is-success' id='logout-button'>Sign Out</button></p>");
       
-  } else{
+  } else {
 
       $("#login-button-wrapper").html("<p class='control'><button class='button is-success' id='login-button'>Login</button></p>");
       $("#login-password").html('<p class="control has-icons-left"><input class="input" type="password" placeholder="Password" id="pass"><span class="icon is-small is-left"><i class="fa fa-lock"></i></span></p>');
@@ -45,9 +45,10 @@ $(document).ready(function() {
 
   renderSubjectOptions();
 
-  $("#new-post-submit").on("click", function(){
+  $("#new-post-submit").on("click", function(event){
     event.preventDefault();
 
+    
     console.log("submitNewPost called")
 
      // Getting jQuery references to the post body, title, form, and user select

@@ -10,7 +10,7 @@ $(document).ready(function() {
       url: `/api/user/${userName}/${userPass}`
     })
     .done(function(userObj) {
-     
+      console.log(userObj);
       localStorage.setItem("currentUser", JSON.stringify(userObj));
       localStorage.setItem("loggedIn", true);
       
